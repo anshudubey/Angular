@@ -326,6 +326,39 @@ Dependencies update for angular 16 :
   "cypress": "~12.17.1",
   "eslint": "^8.49.0",
 
+Angular 15 to 16 upgrade breaking changes 
+
+Here is a list of breaking changes introduced in Angular 16, based on the official release notes and migration guides:
+
+Standalone Components API Update: Angular 16 introduces significant changes to how standalone components are created. This update requires refactoring custom component schematics to include necessary imports such as CommonModule. Additionally, the component must be explicitly declared and bootstrapped as part of the module configuration​
+RUNEBOOK
+​
+TUVOC TECHNOLOGIES
+.
+
+Deprecation of ReflectiveInjector: The ReflectiveInjector class has been deprecated. The new approach requires using the Injector.create() method to instantiate injectors. This change could break applications relying on the old injector creation method​
+RUNEBOOK
+.
+
+CLI Command Changes: Angular 16 includes updates to the Angular CLI, which may change how certain commands work. Some commands or options might have been removed or altered, so it's crucial to test existing build and serve processes to ensure compatibility​
+RUNEBOOK
+.
+
+Advanced Hydration: Angular 16 introduces improvements to the hydration process, which affects how applications are rendered client-side. This might require modifications to existing server-side rendering (SSR) configurations​
+TUVOC TECHNOLOGIES
+.
+
+Changes in Dependency Injection (DI): There are various improvements and changes to DI in Angular 16, such as changes to injector behavior. If your project uses advanced DI patterns, it's recommended to review and adjust your code accordingly​
+RUNEBOOK
+.
+
+Breaking Changes in Observables and RxJS: Angular 16 has improvements and optimizations in how observables and change detection are handled. This may affect the reactivity behavior in some applications, especially those relying on intricate RxJS patterns​
+TUVOC TECHNOLOGIES
+.
+
+For detailed guidance and to address any specific issues in your application, refer to the official Angular 16 update guide​ - https://angular.io/guide/update-to-version-16
+.
+
 2.2. When upgrading dependencies, especially major libraries like Angular and its ecosystem, there are some potential breaking changes or code adjustments required. Here's a summary of potential impacts for the upgraded dependencies from the above list:
 
 1. Angular Core Libraries (@angular/...)
