@@ -1,0 +1,765 @@
+{
+  "@angular-devkit/build-angular": "15.2.1",
+  "@angular-eslint/builder": "15.2.1",
+  "@angular-eslint/eslint-plugin": "15.2.1",
+  "@angular-eslint/eslint-plugin-template": "15.2.1",
+  "@angular-eslint/schematics": "15.2.1",
+  "@angular/cli": "15.2.1",
+  "@angular/compiler-cli": "15.2.1",
+  "@angular/language-service": "15.2.1",
+  "@cypress/schematic": "2.5.0",
+  "@types/jasmine": "4.3.1",
+  "@types/jasminewd2": "2.0.10",
+  "@types/node": "18.14.2",
+  "@typescript-eslint/eslint-plugin": "5.48.2",
+  "@typescript-eslint/parser": "5.48.2",
+  "cypress": "12.1.0",
+  "eslint": "8.33.0",
+  "husky": "8.0.3",
+  "jasmine-core": "4.5.0",
+  "karma": "6.4.1",
+  "karma-chrome-launcher": "3.1.1",
+  "karma-coverage": "2.2.0",
+  "karma-jasmine": "5.0.0",
+  "karma-jasmine-html-reporter": "2.0.0",
+  "karma-sonarqube-reporter": "1.0.23",
+  "lodash": "4.17.21",
+  "ts-node": "10.9.1",
+  "typescript": "4.9.5"
+}
+
+{
+  "@angular/animations": "15.2.1",
+  "@angular/cdk": "15.2.1",
+  "@angular/common": "15.2.1",
+  "@angular/compiler": "15.2.1",
+  "@angular/core": "15.2.1",
+  "@angular/forms": "15.2.1",
+  "@angular/localize": "15.2.1",
+  "@angular/platform-browser": "15.2.1",
+  "@angular/platform-browser-dynamic": "15.2.1",
+  "@angular/router": "15.2.1",
+  "@fortawesome/fontawesome-free": "6.4.2",
+  "@kolkov/angular-editor": "3.0.0",
+  "@moneta/moneta-bootstrap": "beta.0",
+  "@ng-bootstrap/ng-bootstrap": "15.2.1",
+  "@ngrx/effects": "15.2.1",
+  "@ngrx/entity": "15.2.1",
+  "@ngrx/router-store": "15.2.1",
+  "@ngrx/store": "15.2.1",
+  "@ngrx/store-devtools": "15.2.1",
+  "@popperjs/core": "2.11.8",
+  "ag-grid-angular": "30.2.0",
+  "ag-grid-community": "30.2.0",
+  "ag-grid-enterprise": "30.2.0",
+  "bootstrap": "5.2.3",
+  "moment-timezone": "0.5.43",
+  "ng-multiselect-dropdown": "0.3.9",
+  "ngx-toastr": "16.2.0",
+  "rxjs": "7.5.6",
+  "tslib": "2.4.1",
+  "zone.js": "0.12.0"
+}
+
+
+updated :
+{
+  "@angular/animations": "16.2.0",
+  "@angular/cdk": "16.2.0",
+  "@angular/common": "16.2.0",
+  "@angular/compiler": "16.2.0",
+  "@angular/core": "16.2.0",
+  "@angular/forms": "16.2.0",
+  "@angular/localize": "16.2.0",
+  "@angular/platform-browser": "16.2.0",
+  "@angular/platform-browser-dynamic": "16.2.0",
+  "@angular/router": "16.2.0",
+  "@angular/cli": "16.2.0",
+  "@angular/compiler-cli": "16.2.0",
+  "@angular/language-service": "16.2.0",
+  "@angular-devkit/build-angular": "16.2.0",
+  "@angular-eslint/builder": "16.2.1",
+  "@angular-eslint/eslint-plugin": "16.2.1",
+  "@angular-eslint/eslint-plugin-template": "16.2.1",
+  "@angular-eslint/schematics": "16.2.1",
+  "@cypress/schematic": "2.5.0",
+  "@fortawesome/fontawesome-free": "6.4.2",
+  "@kolkov/angular-editor": "3.0.0",
+  "@moneta/moneta-bootstrap": "beta.0",
+  "@ng-bootstrap/ng-bootstrap": "16.0.0",
+  "@ngrx/effects": "16.0.0",
+  "@ngrx/entity": "16.0.0",
+  "@ngrx/router-store": "16.0.0",
+  "@ngrx/store": "16.0.0",
+  "@ngrx/store-devtools": "16.0.0",
+  "@popperjs/core": "2.11.8",
+  "@types/jasmine": "4.3.1",
+  "@types/jasminewd2": "2.0.10",
+  "@types/node": "18.14.2",
+  "@typescript-eslint/eslint-plugin": "5.48.2",
+  "@typescript-eslint/parser": "5.48.2",
+  "ag-grid-angular": "30.2.0",
+  "ag-grid-community": "30.2.0",
+  "ag-grid-enterprise": "30.2.0",
+  "bootstrap": "5.2.3",
+  "cypress": "12.1.0",
+  "eslint": "8.33.0",
+  "husky": "8.0.3",
+  "jasmine-core": "4.5.0",
+  "karma": "6.4.1",
+  "karma-chrome-launcher": "3.1.1",
+  "karma-coverage": "2.2.0",
+  "karma-jasmine": "5.0.0",
+  "karma-jasmine-html-reporter": "2.0.0",
+  "karma-sonarqube-reporter": "1.0.23",
+  "lodash": "4.17.21",
+  "moment-timezone": "0.5.43",
+  "ng-multiselect-dropdown": "0.3.9",
+  "ngx-toastr": "16.2.0",
+  "rxjs": "7.8.1",
+  "ts-node": "10.9.1",
+  "tslib": "2.4.1",
+  "typescript": "4.9.5",
+  "zone.js": "0.13.0"
+}
+
+
+Changes and Notes
+Angular Packages: All Angular-related dependencies are updated to version 16.2.0.
+NgRx: Updated to version 16.0.0 for compatibility with Angular 16.
+RxJS and Zone.js: Updated to 7.8.1 and 0.13.0, respectively, as they are compatible with Angular 16.
+Third-Party Libraries: Maintained the existing versions unless newer ones are mandatory for compatibility.
+
+How to Update Your Project
+Update Angular core packages:
+bash
+Copy code
+ng update @angular/core @angular/cli
+Install third-party dependencies:
+bash
+Copy code
+npm install
+Check the compatibility of other libraries and run tests.
+
+Third-Party Libraries That May Break Without Updates
+The following libraries are tightly coupled with Angular or may rely on specific Angular behaviors:
+
+@ng-bootstrap/ng-bootstrap
+Highly Angular-specific. Needs to be updated to the latest version (16.0.0) to ensure compatibility.
+NgRx Libraries (@ngrx/effects, @ngrx/store, etc.)
+These libraries often tie to Angular's version. Updating to 16.0.0 is required.
+rxjs and zone.js
+These are foundational libraries for Angular. Older versions may break if Angular 16 uses features from newer versions.
+@angular-eslint/*
+Tightly bound to Angular's template parsing and linting rules. Should be updated to match Angular 16.
+
+
+
+Dependencies update for angular 16 :
+
+1. Actual :
+{
+  "@angular-devkit/build-angular": "~15.2.1",
+  "@angular-eslint/builder": "~15.2.1",
+  "@angular-eslint/eslint-plugin": "~15.2.1",
+  "@angular-eslint/eslint-plugin-template": "~15.2.1",
+  "@angular-eslint/schematics": "~15.2.1",
+  "@angular-eslint/template-parser": "~15.2.1",
+  "@angular/animations": "~15.2.1",
+  "@angular/cdk": "~15.2.1",
+  "@angular/cli": "~15.2.1",
+  "@angular/common": "~15.2.1",
+  "@angular/compiler": "~15.2.1",
+  "@angular/compiler-cli": "~15.2.1",
+  "@angular/core": "~15.2.1",
+  "@angular/forms": "~15.2.1",
+  "@angular/language-service": "~15.2.1",
+  "@angular/localize": "~15.2.1",
+  "@angular/platform-browser": "~15.2.1",
+  "@angular/platform-browser-dynamic": "~15.2.1",
+  "@angular/router": "~15.2.1",
+  "@cypress/schematic": "^2.5.0",
+  "@fortawesome/fontawesome-free": "~6.4.2",
+  "@kolkov/angular-editor": "^3.0.0-beta.0",
+  "@moneta/moneta-bootstrap": "~5.2.4",
+  "@ng-bootstrap/ng-bootstrap": "~14.0.1",
+  "@ngrx/effects": "~15.2.1",
+  "@ngrx/entity": "~15.2.1",
+  "@ngrx/router-store": "~15.2.1",
+  "@ngrx/store": "~15.2.1",
+  "@ngrx/store-devtools": "~15.2.1",
+  "@popperjs/core": "^2.11.6",
+  "@types/jasmine": "~4.3.1",
+  "@types/jasminewd2": "~2.0.10",
+  "@types/node": "^18.14.2",
+  "@typescript-eslint/eslint-plugin": "^5.48.2",
+  "@typescript-eslint/parser": "^5.48.2",
+  "ag-grid-angular": "~30.2.0",
+  "ag-grid-community": "~30.2.0",
+  "ag-grid-enterprise": "~30.2.0",
+  "ajv": "^8.12.0",
+  "bootstrap": "^5.2.3",
+  "cypress": "~12.7.0",
+  "eslint": "^8.33.0",
+  "husky": "^8.0.3",
+  "jasmine-core": "~4.5.0",
+  "karma": "~6.4.1",
+  "karma-chrome-launcher": "~3.1.1",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "^2.0.0",
+  "karma-sonarqube-reporter": "^1.4.0",
+  "karma-sonarqube-unit-reporter": "~0.0.23",
+  "lodash": "^4.17.21",
+  "moment-timezone": "^0.5.43",
+  "ng-multiselect-dropdown": "^0.3.9",
+  "ngx-toastr": "^16.2.0",
+  "rxjs": "~7.5.6",
+  "ts-node": "~10.9.1",
+  "tslib": "^2.4.0",
+  "typescript": "~4.9.5",
+  "zone.js": "~0.12.0"
+}
+
+
+2. All dependencies are updated to latest :
+{
+  "@angular-devkit/build-angular": "~16.2.4",
+  "@angular-eslint/builder": "~16.2.1",
+  "@angular-eslint/eslint-plugin": "~16.2.1",
+  "@angular-eslint/eslint-plugin-template": "~16.2.1",
+  "@angular-eslint/schematics": "~16.2.1",
+  "@angular-eslint/template-parser": "~16.2.1",
+  "@angular/animations": "~16.2.4",
+  "@angular/cdk": "~16.2.4",
+  "@angular/cli": "~16.2.4",
+  "@angular/common": "~16.2.4",
+  "@angular/compiler": "~16.2.4",
+  "@angular/compiler-cli": "~16.2.4",
+  "@angular/core": "~16.2.4",
+  "@angular/forms": "~16.2.4",
+  "@angular/language-service": "~16.2.4",
+  "@angular/localize": "~16.2.4",
+  "@angular/platform-browser": "~16.2.4",
+  "@angular/platform-browser-dynamic": "~16.2.4",
+  "@angular/router": "~16.2.4",
+  "@cypress/schematic": "^2.5.0",
+  "@fortawesome/fontawesome-free": "~6.4.2",
+  "@kolkov/angular-editor": "^3.0.0-beta.0",
+  "@moneta/moneta-bootstrap": "~5.2.4",
+  "@ng-bootstrap/ng-bootstrap": "~15.1.0",
+  "@ngrx/effects": "~16.0.0",
+  "@ngrx/entity": "~16.0.0",
+  "@ngrx/router-store": "~16.0.0",
+  "@ngrx/store": "~16.0.0",
+  "@ngrx/store-devtools": "~16.0.0",
+  "@popperjs/core": "^2.11.8",
+  "@types/jasmine": "~4.3.1",
+  "@types/jasminewd2": "~2.0.10",
+  "@types/node": "^20.6.1",
+  "@typescript-eslint/eslint-plugin": "^6.7.2",
+  "@typescript-eslint/parser": "^6.7.2",
+  "ag-grid-angular": "~30.2.1",
+  "ag-grid-community": "~30.2.1",
+  "ag-grid-enterprise": "~30.2.1",
+  "ajv": "^8.12.0",
+  "bootstrap": "^5.3.2",
+  "cypress": "~12.17.1",
+  "eslint": "^8.49.0",
+  "husky": "^8.0.3",
+  "jasmine-core": "~4.5.0",
+  "karma": "~6.4.2",
+  "karma-chrome-launcher": "~3.1.2",
+  "karma-coverage": "~2.2.1",
+  "karma-jasmine": "~6.0.0",
+  "karma-jasmine-html-reporter": "^2.0.0",
+  "karma-sonarqube-reporter": "^1.4.0",
+  "karma-sonarqube-unit-reporter": "~0.0.23",
+  "lodash": "^4.17.21",
+  "moment-timezone": "^0.5.43",
+  "ng-multiselect-dropdown": "^0.3.9",
+  "ngx-toastr": "^17.0.0",
+  "rxjs": "~7.8.1",
+  "ts-node": "~10.9.1",
+  "tslib": "^2.6.2",
+  "typescript": "~5.2.2",
+  "zone.js": "~0.13.1"
+}
+
+2.1. List of dependencies we updated above :
+"@angular-devkit/build-angular": "~16.2.4",
+  "@angular-eslint/builder": "~16.2.1",
+  "@angular-eslint/eslint-plugin": "~16.2.1",
+  "@angular-eslint/eslint-plugin-template": "~16.2.1",
+  "@angular-eslint/schematics": "~16.2.1",
+  "@angular-eslint/template-parser": "~16.2.1",
+  "@angular/animations": "~16.2.4",
+  "@angular/cdk": "~16.2.4",
+  "@angular/cli": "~16.2.4",
+  "@angular/common": "~16.2.4",
+  "@angular/compiler": "~16.2.4",
+  "@angular/compiler-cli": "~16.2.4",
+  "@angular/core": "~16.2.4",
+  "@angular/forms": "~16.2.4",
+  "@angular/language-service": "~16.2.4",
+  "@angular/localize": "~16.2.4",
+  "@angular/platform-browser": "~16.2.4",
+  "@angular/platform-browser-dynamic": "~16.2.4",
+  "@angular/router": "~16.2.4",
+
+"@ng-bootstrap/ng-bootstrap": "~15.1.0",
+  "@ngrx/effects": "~16.0.0",
+  "@ngrx/entity": "~16.0.0",
+  "@ngrx/router-store": "~16.0.0",
+  "@ngrx/store": "~16.0.0",
+  "@ngrx/store-devtools": "~16.0.0",
+  "@popperjs/core": "^2.11.8",
+
+ "@types/node": "^20.6.1",
+  "@typescript-eslint/eslint-plugin": "^6.7.2",
+  "@typescript-eslint/parser": "^6.7.2",
+  "ag-grid-angular": "~30.2.1",
+  "ag-grid-community": "~30.2.1",
+  "ag-grid-enterprise": "~30.2.1",
+
+ "bootstrap": "^5.3.2",
+  "cypress": "~12.17.1",
+  "eslint": "^8.49.0",
+
+2.2. When upgrading dependencies, especially major libraries like Angular and its ecosystem, there are some potential breaking changes or code adjustments required. Here's a summary of potential impacts for the upgraded dependencies from the above list:
+
+1. Angular Core Libraries (@angular/...)
+Impact: Minimal breaking changes if upgrading directly from Angular 15 to 16.
+Breaking Changes to Check:
+Template Syntax: Angular 16 introduces structural directive composition, signal-based reactivity, and other enhancements. Check for deprecated APIs in templates and replace them with the recommended ones.
+Dependency Injection: Some DI changes have been made for strict mode; ensure your services follow the updated DI practices.
+Standalone Components: Ensure modules and components use the modern standalone or modular API.
+2. @angular-eslint
+Impact: Updated rules for Angular 16.
+Breaking Changes to Check:
+Some new linting rules for signals and template directives might require updates to your .eslintrc.json.
+Custom lint rules may need updates to align with the Angular 16 template parser.
+3. @ng-bootstrap/ng-bootstrap
+Impact: Updates from 14.x to 15.x.
+Breaking Changes to Check:
+Ensure you are using Angular 16 before updating to 15.x.
+Component or directive APIs may have minor adjustments; check the library changelog for details.
+4. @ngrx Libraries
+Impact: Updates from 15.x to 16.x.
+Breaking Changes to Check:
+Signal-based State Management: NgRx 16 introduces experimental features for Angular Signals. If you're not using them, your existing NgRx code will remain compatible.
+Check for deprecated APIs (e.g., legacy ActionReducer interfaces).
+5. TypeScript
+Impact: Upgrade from 4.9 to 5.2.
+Breaking Changes to Check:
+Module Resolution: TypeScript 5.x introduces stricter module resolution rules. If you are using non-standard paths in tsconfig.json, they may require adjustment.
+Some type inference and error checking improvements might reveal previously hidden issues in your code.
+6. zone.js
+Impact: Minimal breaking changes for apps already using Angular’s Zone.js.
+Breaking Changes to Check:
+No breaking changes specific to Angular 16. Safe to upgrade.
+7. rxjs
+Impact: Update from 7.5.6 to 7.8.1.
+Breaking Changes to Check:
+No breaking changes within the 7.x series.
+Ensure you are not using deprecated operators or patterns from RxJS 6.x that could cause issues.
+8. ngx-toastr
+Impact: Update from 16.x to 17.x.
+Breaking Changes to Check:
+No known breaking changes for most use cases. Check if you are using custom container implementations, as there might be minor changes.
+9. ag-grid (Community and Enterprise)
+Impact: Upgrade from 30.0.0 to 30.2.1.
+Breaking Changes to Check:
+Verify any custom configurations. Major changes to features like theming or event listeners are unlikely in the 30.x series.
+10. Miscellaneous Libraries
+Bootstrap:
+Safe upgrade from 5.2.3 to 5.3.2. Minimal or no breaking changes.
+Karma & Jasmine:
+Safe updates; no breaking changes expected for typical Angular test setups.
+
+
+
+3. Only minimal required dependencies are updated :
+{
+  "@angular-devkit/build-angular": "~15.2.1",
+  "@angular-eslint/builder": "~15.2.1",
+  "@angular-eslint/eslint-plugin": "~15.2.1",
+  "@angular-eslint/eslint-plugin-template": "~15.2.1",
+  "@angular-eslint/schematics": "~15.2.1",
+  "@angular-eslint/template-parser": "~15.2.1",
+  "@angular/animations": "~16.2.0",
+  "@angular/cdk": "~16.2.0",
+  "@angular/cli": "~16.2.0",
+  "@angular/common": "~16.2.0",
+  "@angular/compiler": "~16.2.0",
+  "@angular/compiler-cli": "~16.2.0",
+  "@angular/core": "~16.2.0",
+  "@angular/forms": "~16.2.0",
+  "@angular/language-service": "~16.2.0",
+  "@angular/localize": "~16.2.0",
+  "@angular/platform-browser": "~16.2.0",
+  "@angular/platform-browser-dynamic": "~16.2.0",
+  "@angular/router": "~16.2.0",
+  "@cypress/schematic": "^2.5.0",
+  "@fortawesome/fontawesome-free": "~6.4.2",
+  "@kolkov/angular-editor": "^3.0.0-beta.0",
+  "@moneta/moneta-bootstrap": "~5.2.4",
+  "@ng-bootstrap/ng-bootstrap": "~14.0.1",
+  "@ngrx/effects": "~15.2.1",
+  "@ngrx/entity": "~15.2.1",
+  "@ngrx/router-store": "~15.2.1",
+  "@ngrx/store": "~15.2.1",
+  "@ngrx/store-devtools": "~15.2.1",
+  "@popperjs/core": "^2.11.6",
+  "@types/jasmine": "~4.3.1",
+  "@types/jasminewd2": "~2.0.10",
+  "@types/node": "^18.14.2",
+  "@typescript-eslint/eslint-plugin": "^5.48.2",
+  "@typescript-eslint/parser": "^5.48.2",
+  "ag-grid-angular": "~30.2.0",
+  "ag-grid-community": "~30.2.0",
+  "ag-grid-enterprise": "~30.2.0",
+  "ajv": "^8.12.0",
+  "bootstrap": "^5.2.3",
+  "cypress": "~12.7.0",
+  "eslint": "^8.33.0",
+  "husky": "^8.0.3",
+  "jasmine-core": "~4.5.0",
+  "karma": "~6.4.1",
+  "karma-chrome-launcher": "~3.1.1",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "^2.0.0",
+  "karma-sonarqube-reporter": "^1.4.0",
+  "karma-sonarqube-unit-reporter": "~0.0.23",
+  "lodash": "^4.17.21",
+  "moment-timezone": "^0.5.43",
+  "ng-multiselect-dropdown": "^0.3.9",
+  "ngx-toastr": "^16.2.0",
+  "rxjs": "~7.8.1",
+  "ts-node": "~10.9.1",
+  "tslib": "^2.4.0",
+  "typescript": "~5.2.2",
+  "zone.js": "~0.13.1"
+}
+
+
+3.1 List of dependencies we updated above :
+  "@angular/animations": "~16.2.0",
+  "@angular/cdk": "~16.2.0",
+  "@angular/cli": "~16.2.0",
+  "@angular/common": "~16.2.0",
+  "@angular/compiler": "~16.2.0",
+  "@angular/compiler-cli": "~16.2.0",
+  "@angular/core": "~16.2.0",
+  "@angular/forms": "~16.2.0",
+  "@angular/language-service": "~16.2.0",
+  "@angular/localize": "~16.2.0",
+  "@angular/platform-browser": "~16.2.0",
+  "@angular/platform-browser-dynamic": "~16.2.0",
+  "@angular/router": "~16.2.0",
+
+  "rxjs": "~7.8.1",
+  "typescript": "~5.2.2",
+  "zone.js": "~0.13.1"
+
+3.2 Here are the breaking changes and considerations for the updated dependencies in your Angular 16 upgrade:
+
+1. Angular Packages (@angular/*)
+Breaking Changes:
+Standalone Components: Angular 16 recommends migrating to standalone components as they become the preferred option for future development. If your application heavily relies on NgModules, ensure compatibility.
+Deprecated Features Removed: Features deprecated in Angular 14 and 15 are removed (e.g., inject() replacing older DI patterns).
+Reactive Forms Validators Changes: Some validators in Reactive Forms now return null instead of undefined for validity checks.
+Recommended Actions:
+Review the Angular Update Guide for project-specific steps.
+Update any uses of removed/deprecated APIs.
+2. RxJS (~7.8.1)
+Breaking Changes:
+RxJS 7 introduced stricter TypeScript typings, which might cause compilation errors if you use loosely-typed Observables.
+Changes in tap, mergeMap, and other operators may cause issues if their typings are not followed.
+Recommended Actions:
+Fix TypeScript errors in Observable chains.
+Test your code for unexpected behavior due to stricter typings.
+3. TypeScript (~5.2.2)
+Breaking Changes:
+TypeScript 5.x enforces stricter type checking, which may cause compilation errors if your code has implicit any or mismatched types.
+Several older TypeScript features are deprecated or removed.
+Recommended Actions:
+Fix type-related issues in your code.
+Enable strict mode in tsconfig.json if it's not already enabled to catch potential type issues early.
+4. Zone.js (~0.13.1)
+Breaking Changes:
+Zone.js may have optimizations that could change the way asynchronous tasks are handled.
+Some APIs may be deprecated or removed.
+Recommended Actions:
+Verify any custom implementations involving Zone.js.
+5. Other Dependencies
+@ng-bootstrap/ng-bootstrap (~14.0.1):
+This version is compatible with Angular 16, but test all components to ensure compatibility with updated Angular.
+ngx-toastr (^16.2.0):
+No breaking changes reported, but test toast notifications to ensure styles and behavior remain consistent.
+
+************************************************************************************************************************************************************************
+
+
+
+
+
+ANGULAR 17 :
+
+
+When upgrading from Angular 16 to Angular 17, there are several key new features and enhancements that you should consider to fully leverage the benefits of this update. Here's a breakdown of the most important ones:
+
+1. Signal System for Improved Reactivity:
+Angular 17 introduces a stable version of Signals, a new reactive programming system that eliminates the need for Zone.js in most cases, improving change detection performance. Signals provide a fine-grained way to manage state and computations within components, making it easier to track dependencies and optimize updates​
+STEP2GEN
+​
+DEV COMMUNITY
+.
+Impact: If you're using OnPush change detection, refactoring parts of your app to utilize Signals can improve performance and offer better control over updates.
+2. Declarative Control Flow:
+Angular 17 introduces a new syntax for control flow in templates, such as @if, @else, @for, and @switch. These replace traditional NgIf and NgFor directives, offering a cleaner, more declarative syntax​
+DAILY DEV
+.
+Impact: Refactoring your templates to use this syntax can simplify and optimize your code.
+3. Improved Lazy Loading with @defer:
+The new @defer directive makes lazy loading components easier and more efficient, supporting loading states such as loading, error, and placeholder. This is particularly useful for improving performance metrics, including Core Web Vitals​
+DEV COMMUNITY
+.
+Impact: If your app has lazy-loaded components, consider switching to this more declarative and optimized lazy loading method for better UX and performance.
+4. Automatic CSS Cleanup:
+Angular 17 introduces automatic removal of CSS associated with destroyed components, helping to reduce memory leaks and improve app performance, especially in dynamic UIs where components are frequently added and removed​
+DEV COMMUNITY
+.
+Impact: This feature will require no changes to your code, but it's important to ensure that your styles are properly scoped to components to avoid unintentional side effects.
+5. Performance Improvements:
+Angular 17 has further performance optimizations in terms of faster build and load times. With over 65% faster production builds, Angular's AOT (Ahead-of-Time) compilation process and Webpack 5 integration deliver significant speed improvements​
+DEV COMMUNITY
+​
+ANGULAR
+.
+Impact: Your app should see faster build times, especially if you are working with a large codebase, and smaller bundle sizes, improving both developer productivity and app performance.
+6. TypeScript 5.2 Support:
+Angular 17 adds compatibility with TypeScript 5.2, which brings several improvements like better recursive type checking, enhanced array handling, and support for the using keyword. This could impact your code if you're using complex types​
+DEV COMMUNITY
+​
+ANGULAR
+.
+Impact: Ensure your TypeScript code is compatible with version 5.2 to take full advantage of these improvements.
+7. Webpack 5 Integration:
+The integration with Webpack 5 further improves build performance by enabling features like better caching and faster rebuilds. This, combined with Angular's optimizations, helps reduce overall build time and bundle size​
+ANGULAR
+.
+Impact: If you have custom Webpack configurations, you may need to update them to ensure compatibility with Webpack 5. The overall impact will be faster development cycles.
+8. Angular Material 3 Integration:
+Angular 17 continues to enhance Material 3 integration, aligning with the latest Google design standards and making it easier to implement modern UI patterns in your app​
+​
+.
+Impact: If you're using Angular Material, you may need to update some components or apply new design patterns introduced in Material 3.
+9. Angular DevTools Enhancements:
+The Angular DevTools now provides better debugging features, such as the ability to inspect the dependency injection tree and trace the state of your application more effectively​
+.
+Impact: These tools can help you debug and optimize your app more easily, particularly if you're dealing with complex dependency chains or state management.
+10. Other Miscellaneous Enhancements:
+Improved Internationalization (i18n): Angular 17 includes better tools for handling translations, currency formatting, and date management​
+.
+Better Support for Standalone Components: The usage of standalone components has been further streamlined, simplifying their integration into modules and improving flexibility​
+.
+
+***************************************************************************************************************************************************************************************************************
+
+Upgrading from Angular 16 to Angular 17 introduces a few important breaking changes and considerations for your application:
+
+Structural Directives and Code Flow: Angular 17 introduces a new built-in flow code that simplifies the use of structural directives. Previously, directives like ngIf, ngFor, and ngSwitch were used for controlling the template flow. With Angular 17, there's a new syntax that eliminates the need for these imports. While these structural directives are not deprecated yet, the new flow code will likely be favored for future development. You can migrate your components using a schematic (ng g @angular/core:control-flow)​
+DAILY DEV
+​
+DEV COMMUNITY
+.
+
+Signal API: Angular 17 makes the Signal API stable, which was introduced as a developer preview in Angular 16. However, the mutate method from Signals has been removed in Angular 17, which could impact how you handle reactivity in components. Signals combined with ChangeDetection.OnPush enable more precise updates, reducing unnecessary change detection​
+DAILY DEV
+​
+DEV COMMUNITY
+.
+
+Deferred Component Loading: Angular 17 introduces the @defer directive, simplifying lazy loading of components. This makes it easier to manage loading states (such as loading, placeholder, and error) when components are deferred. This new feature improves the developer experience and performance optimization for Core Web Vitals​
+DEV COMMUNITY
+.
+
+Changes in Angular DevTools: Angular DevTools has been updated with a feature to inspect the dependency injection tree, helping with debugging, particularly for circular dependencies or unresolved tokens​
+DEV COMMUNITY
+.
+
+Performance Improvements:
+
+Faster build and load times, with production builds over 65% quicker​
+DAILY DEV
+.
+Enhanced change detection and memory optimization to improve app performance​
+DAILY DEV
+.
+Material 3 Integration: Angular 17 continues improving Material 3 support, ensuring your app's UI follows Google's latest design system, which may require some adjustments if you’re upgrading from older Material versions​
+DAILY DEV
+.
+
+Recommendations:
+Review any custom directives or structural logic that could benefit from the new @defer and flow code.
+Ensure your application takes full advantage of Signals, especially if you're using OnPush change detection.
+Test your app thoroughly after migration, as some subtle changes in lazy loading and reactivity might impact your components.
+Keep an eye on your Material implementation for compatibility with Material 3.
+Always refer to Angular's official migration guide for detailed steps and further updates​
+
+
+
+Dependencies :
+
+1. Actual : with 16 upgrade
+{
+  "@angular-devkit/build-angular": "~15.2.1",
+  "@angular-eslint/builder": "~15.2.1",
+  "@angular-eslint/eslint-plugin": "~15.2.1",
+  "@angular-eslint/eslint-plugin-template": "~15.2.1",
+  "@angular-eslint/schematics": "~15.2.1",
+  "@angular-eslint/template-parser": "~15.2.1",
+  "@angular/animations": "~16.2.0",
+  "@angular/cdk": "~16.2.0",
+  "@angular/cli": "~16.2.0",
+  "@angular/common": "~16.2.0",
+  "@angular/compiler": "~16.2.0",
+  "@angular/compiler-cli": "~16.2.0",
+  "@angular/core": "~16.2.0",
+  "@angular/forms": "~16.2.0",
+  "@angular/language-service": "~16.2.0",
+  "@angular/localize": "~16.2.0",
+  "@angular/platform-browser": "~16.2.0",
+  "@angular/platform-browser-dynamic": "~16.2.0",
+  "@angular/router": "~16.2.0",
+  "@cypress/schematic": "^2.5.0",
+  "@fortawesome/fontawesome-free": "~6.4.2",
+  "@kolkov/angular-editor": "^3.0.0-beta.0",
+  "@moneta/moneta-bootstrap": "~5.2.4",
+  "@ng-bootstrap/ng-bootstrap": "~14.0.1",
+  "@ngrx/effects": "~15.2.1",
+  "@ngrx/entity": "~15.2.1",
+  "@ngrx/router-store": "~15.2.1",
+  "@ngrx/store": "~15.2.1",
+  "@ngrx/store-devtools": "~15.2.1",
+  "@popperjs/core": "^2.11.6",
+  "@types/jasmine": "~4.3.1",
+  "@types/jasminewd2": "~2.0.10",
+  "@types/node": "^18.14.2",
+  "@typescript-eslint/eslint-plugin": "^5.48.2",
+  "@typescript-eslint/parser": "^5.48.2",
+  "ag-grid-angular": "~30.2.0",
+  "ag-grid-community": "~30.2.0",
+  "ag-grid-enterprise": "~30.2.0",
+  "ajv": "^8.12.0",
+  "bootstrap": "^5.2.3",
+  "cypress": "~12.7.0",
+  "eslint": "^8.33.0",
+  "husky": "^8.0.3",
+  "jasmine-core": "~4.5.0",
+  "karma": "~6.4.1",
+  "karma-chrome-launcher": "~3.1.1",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "^2.0.0",
+  "karma-sonarqube-reporter": "^1.4.0",
+  "karma-sonarqube-unit-reporter": "~0.0.23",
+  "lodash": "^4.17.21",
+  "moment-timezone": "^0.5.43",
+  "ng-multiselect-dropdown": "^0.3.9",
+  "ngx-toastr": "^16.2.0",
+  "rxjs": "~7.8.1",
+  "ts-node": "~10.9.1",
+  "tslib": "^2.4.0",
+  "typescript": "~5.2.2",
+  "zone.js": "~0.13.1"
+}
+
+2. Upgrade to 17 with minimal required dependency changes :
+{
+  "@angular/animations": "~17.0.0",
+  "@angular/cdk": "~17.0.0",
+  "@angular/cli": "~17.0.0",
+  "@angular/common": "~17.0.0",
+  "@angular/compiler": "~17.0.0",
+  "@angular/compiler-cli": "~17.0.0",
+  "@angular/core": "~17.0.0",
+  "@angular/devkit/build-angular": "~17.0.0",
+  "@angular/forms": "~17.0.0",
+  "@angular/language-service": "~17.0.0",
+  "@angular/localize": "~17.0.0",
+  "@angular/platform-browser": "~17.0.0",
+  "@angular/platform-browser-dynamic": "~17.0.0",
+  "@angular/router": "~17.0.0",
+  "@angular-eslint/builder": "~17.0.0",
+  "@angular-eslint/eslint-plugin": "~17.0.0",
+  "@angular-eslint/eslint-plugin-template": "~17.0.0",
+  "@angular-eslint/schematics": "~17.0.0",
+  "@angular-eslint/template-parser": "~17.0.0",
+  "@cypress/schematic": "^2.5.0",
+  "@fortawesome/fontawesome-free": "~6.4.2",
+  "@kolkov/angular-editor": "^3.0.0-beta.0",
+  "@moneta/moneta-bootstrap": "~5.2.4",
+  "@ng-bootstrap/ng-bootstrap": "~14.0.1",
+  "@ngrx/effects": "~15.2.1",
+  "@ngrx/entity": "~15.2.1",
+  "@ngrx/router-store": "~15.2.1",
+  "@ngrx/store": "~15.2.1",
+  "@ngrx/store-devtools": "~15.2.1",
+  "@popperjs/core": "^2.11.6",
+  "@types/jasmine": "~4.3.1",
+  "@types/jasminewd2": "~2.0.10",
+  "@types/node": "^18.14.2",
+  "@typescript-eslint/eslint-plugin": "^5.48.2",
+  "@typescript-eslint/parser": "^5.48.2",
+  "ag-grid-angular": "~30.2.0",
+  "ag-grid-community": "~30.2.0",
+  "ag-grid-enterprise": "~30.2.0",
+  "ajv": "^8.12.0",
+  "bootstrap": "^5.2.3",
+  "cypress": "~12.7.0",
+  "eslint": "^8.33.0",
+  "husky": "^8.0.3",
+  "jasmine-core": "~4.5.0",
+  "karma": "~6.4.1",
+  "karma-chrome-launcher": "~3.1.1",
+  "karma-coverage": "~2.2.0",
+  "karma-jasmine": "~5.1.0",
+  "karma-jasmine-html-reporter": "^2.0.0",
+  "karma-sonarqube-reporter": "^1.4.0",
+  "karma-sonarqube-unit-reporter": "~0.0.23",
+  "lodash": "^4.17.21",
+  "moment-timezone": "^0.5.43",
+  "ng-multiselect-dropdown": "^0.3.9",
+  "ngx-toastr": "^16.2.0",
+  "rxjs": "~7.8.1",
+  "ts-node": "~10.9.1",
+  "tslib": "^2.4.0",
+  "typescript": "~5.2.2",
+  "zone.js": "~0.13.1"
+}
+
+
+List of dependency that need to update :
+  "@angular/animations": "~17.0.0",
+  "@angular/cdk": "~17.0.0",
+  "@angular/cli": "~17.0.0",
+  "@angular/common": "~17.0.0",
+  "@angular/compiler": "~17.0.0",
+  "@angular/compiler-cli": "~17.0.0",
+  "@angular/core": "~17.0.0",
+  "@angular/devkit/build-angular": "~17.0.0",
+  "@angular/forms": "~17.0.0",
+  "@angular/language-service": "~17.0.0",
+  "@angular/localize": "~17.0.0",
+  "@angular/platform-browser": "~17.0.0",
+  "@angular/platform-browser-dynamic": "~17.0.0",
+  "@angular/router": "~17.0.0",
+  "@angular-eslint/builder": "~17.0.0",
+  "@angular-eslint/eslint-plugin": "~17.0.0",
+  "@angular-eslint/eslint-plugin-template": "~17.0.0",
+  "@angular-eslint/schematics": "~17.0.0",
+  "@angular-eslint/template-parser": "~17.0.0",
+
