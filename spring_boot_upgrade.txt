@@ -1,0 +1,90 @@
+New features :
+
+
+Benefits of Upgrading
+Enhanced Observability: Refinements to the Actuator API improve application visibility and management. 
+
+Dependency Upgrades: Updates to various dependencies, including Hibernate, Kafka, and Micrometer, provide access to new features and improvements. 
+
+Improved Developer Experience: Features like AssertJ-style MvcTester for Spring MVC tests and better support for mocked beans enhance testing capabilities. 
+
+🔒 Security and ⚡ Performance Considerations
+Security Enhancements:
+
+Improved Observability: Enhanced integration for monitoring authorization, authentication, and request observations separately. 
+
+Structured Logging: Introduced structured logging to improve log readability and analysis. 
+
+Performance Improvements:
+
+Startup Time and Memory Usage: Optimizations have been made to reduce application startup times and memory consumption. 
+
+Java 21 Enhancements: Leveraging Java 21 features, such as virtual threads, to enhance application performance. 
+
+Breaking Changes in Spring Boot 3.4
+
+1. Removed APIs in Spring Boot 3.4 :
+1. Testing Annotations
+Removed: @MockBean and @SpyBean
+Replacement: @MockitoBean and @MockitoSpyBean
+
+Note: The new annotations offer similar functionality but with some differences. For instance, @MockitoBean cannot be used on @Configuration classes, and there isn't a direct replacement for @MockBeans. 
+
+2. Configuration Utilities
+Removed: org.springframework.boot.context.annotation.Configurations.sort(Collection<Class<?>>)
+Replacement: Configurations(UnaryOperator, Collection, Function)
+
+3. Resource Loading
+Removed: org.springframework.boot.io.ApplicationResourceLoader() and ApplicationResourceLoader(ClassLoader)
+Replacement: ApplicationResourceLoader.get() and ApplicationResourceLoader.get(ClassLoader)
+
+4. JDBC Lifecycle Management
+Removed: org.springframework.boot.jdbc.HikariCheckpointRestoreLifecycle(DataSource)
+Replacement: HikariCheckpointRestoreLifecycle(DataSource, ConfigurableApplicationContext)
+docshoster.org
+
+5. Logging Converters
+Removed: org.springframework.boot.logging.logback.ApplicationNameConverter
+Replacement: EnclosedInSquareBracketsConverter
+
+2.Configuration Properties Behavior: @ConfigurationProperties beans now respect annotations like @Primary, @Lazy, @Scope, and @Fallback. This change can lead to multiple bean definition errors if not managed correctly. 
+
+3.Spring Security Filter Chains: If multiple filter chains are configured to match all requests, Spring Boot 3.4 may throw errors. Ensure that only one filter chain is configured for any request. 
+
+4.Testing Changes: Integration tests, especially those involving Spring Cloud Gateway or JPA/Hibernate, may fail due to changes in underlying libraries. Review and update your tests accordingly.
+Build Tool Requirements: Spring Boot 3.4 requires Gradle 7.6.4 or later, or Gradle 8.4 or later. Older versions are no longer supported. 
+
+5.Configuration Properties Behavior: @ConfigurationProperties beans now respect annotations like @Primary, @Lazy, @Scope, and @Fallback. This change can lead to multiple bean definition errors if not managed correctly. 
+
+6.Spring Security Filter Chains: If multiple filter chains are configured to match all requests, Spring Boot 3.4 may throw errors. Ensure that only one filter chain is configured for any request. 
+
+7.Testing Changes: Integration tests, especially those involving Spring Cloud Gateway or JPA/Hibernate, may fail due to changes in underlying libraries. Review and update your tests accordingly.
+
+
+More granular Actuator access control
+The original on-off support has been augmented with a read-only mode to enhance security.
+
+To facilitate this some properties have been deprecated
+
+management.endpoints.enabled-by-default in favour of management.endpoints.access.default
+management.endpoint.<id>.enabled in favour of management.endpoint.<id>.access
+On the @Endpoint annotation, the enableByDefault attribute has also been deprecated in favour of the new defaultAccess attribute.
+
+Important to keep in mind is that enabled-by-default is now applied consistently regardless of the use of @ConditionalOnEnabledEndpoint. Thus I an endpoint becomes unavailable after your upgrade you will need to do one of the following:
+
+set management.endpoint.<id>.access to read-only or unrestricted
+set management.endpoint.<id>.enabled to true
+And a new property has been added: management.endpoints.access.max-permitted. It allows an operator to manage the permitted access level to Actuator endpoints by defining the maximum level of access.
+
+For example:
+
+management.endpoint.loggers.access=unrestricted
+
+management.endpoints.access.max-permitted=readonly
+
+This will result in only read-only access to the logger endpoint being allowed.
+
+The /actuator/scheduledtasks endpoint now provides additional metadata, including next execution time, last execution status, and any exceptions encountered.
+
+
+

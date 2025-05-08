@@ -1,0 +1,93 @@
+🚀 Spring Boot 3.4 – New Features (Since 3.3)
+🔧 1. Improved Configuration & Bean Management
+@Fallback Annotation: Define beans as fallback options if a primary bean is missing.
+
+Better Constructor Binding for @ConfigurationProperties: More robust validation and binding behavior.
+
+Custom Bean Coexistence: Now supports defining multiple beans of the same type alongside auto-configured ones.
+
+📡 2. Observability & Monitoring
+Structured Logging Support:
+
+Log formats now support structured output (e.g., JSON, ECS, Logstash).
+
+Configurable via logging.format and logging.group.
+
+New Health Contributor – SSL:
+
+Checks for certificate expiry or invalid certificates.
+
+Enable with:
+
+yaml
+Copy
+Edit
+management.health.ssl.enabled=true
+Extended /actuator/scheduledtasks:
+
+Now shows:
+
+lastExecution
+
+nextExecution
+
+lastCompletion and exception (if any)
+
+New /actuator/sbom Endpoint:
+
+Provides a Software Bill of Materials for security and supply chain audits.
+
+Application Group Tagging:
+
+spring.application.group to logically group instances for logs and telemetry.
+
+🧪 3. Testing Enhancements
+New Testing Annotations:
+
+@MockitoBean and @MockitoSpyBean replace the deprecated @MockBean and @SpyBean.
+
+Not 1:1 replacements, some limitations exist (e.g., cannot be used on @Configuration classes).
+
+AssertJ-style MockMvcTester:
+
+A fluent, expressive way to test Spring MVC controllers.
+
+Improved ApplicationContextRunner for isolated config testing.
+
+🌐 4. HTTP Client Enhancements
+RestTemplate and RestClient auto-config now chooses client based on priority:
+
+Order: Apache → Jetty → Reactor Netty → JDK HttpClient → Simple
+
+Configure explicitly using:
+
+properties
+Copy
+Edit
+spring.http.client.factory=apache
+🐳 5. Docker & Testcontainers Support
+Multi Compose File Support: Supports multiple Docker Compose files via spring.docker.compose.files.
+
+Testcontainers Enhancements:
+
+Support added for Redis Stack, Hazelcast, and Grafana LGTM containers.
+
+Container Architecture Support:
+
+Specify OS/arch in image builds (e.g., ARM64, x86_64) via Maven or Gradle plugin.
+
+🛠️ 6. Dependency and Plugin Upgrades
+Micrometer 1.12, Kafka, Hibernate, and other ecosystem libraries updated.
+
+Support for Java 21 virtual threads:
+
+Spring Boot 3.4 is better aligned with Java 21 features, improving performance with virtual threads (especially in reactive workloads or high-concurrency apps).
+
+✅ Summary – What You'll Gain Over 3.3
+Feature Category	New in 3.4
+Config & Beans	@Fallback, relaxed bean coexistence
+Observability	Structured logs, /actuator/sbom, SSL health, task metadata
+Testing	AssertJ-style MockMvc, @MockitoBean, @MockitoSpyBean
+HTTP Clients	Smart auto-config of RestClient / RestTemplate
+Docker/Testcontainers	Multi-compose, Redis Stack, Grafana LGTM, container arch config
+Java 21 Support	Better support for virtual threads
