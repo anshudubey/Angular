@@ -1,0 +1,58 @@
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import * as XLSX from 'xlsx';
+import * as FileSaver from 'file-saver';
+
+@Component({
+  selector: 'app-root',
+  template: `<button (click)="downloadExcel()">Download Excel</button>`
+})
+export class AppComponent {
+  constructor(private http: HttpClient) {}
+
+  downloadExcel(): void {
+    this.http.get<any[]>('https://your-api-endpoint.com/data')
+      .subscribe(data => {
+        const camelCasedData = this.convertKeysToCamelCase(data);
+        this.exportToExcel(camelCasedData, 'utf-data');
+      }, error => {
+        console.error('Error fetching data:', error);
+      });
+  }
+
+  convertKeysToCamelCase(data: any[]): any[] {
+    return data.map(obj => {
+      const newObj: any = {};
+      for (const key of Object.keys(obj)) {
+        const camelKey = this.toCamelCase(key);
+        newObj[camelKey] = obj[key];
+      }
+      return newObj;
+    });
+  }
+
+  toCamelCase(str: string): string {
+    return str
+      .replace(/[_\s]+(.)?/g, (_, c) => c ? c.toUpperCase() : '')
+      .replace(/^(.)/, (m) => m.toLowerCase());
+  }
+
+  exportToExcel(jsonData: any[], fileName: string): void {
+    const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(jsonData);
+    const workbook: XLSX.WorkBook = {
+      Sheets: { 'data': worksheet },
+      SheetNames: ['data']
+    };
+
+    const excelBuffer: any = XLSX.write(workbook, {
+      bookType: 'xlsx',
+      type: 'array'
+    });
+
+    const blob: Blob = new Blob([excelBuffer], {
+      type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8'
+    });
+
+    FileSaver.saveAs(blob, `${fileName}.xlsx`);
+  }
+}
