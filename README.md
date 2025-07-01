@@ -48,3 +48,19 @@ public class MyService {
     }
 }
 
+public class JobContext {
+    private static final InheritableThreadLocal<String> jobId = new InheritableThreadLocal<>();
+
+    public static void setJobId(String id) {
+        jobId.set(id);
+    }
+
+    public static String getJobId() {
+        return jobId.get();
+    }
+
+    public static void clear() {
+        jobId.remove();
+    }
+}
+
