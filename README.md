@@ -4,63 +4,17 @@ new line
  Angular 17 automatically removes component-associated styles from the DOM when the component is destroyed. In Angular 15, these styles persisted, which some applications might have relied on implicitly.
 
 **************************************************************************
-public class RequestContext {
-    private static final ThreadLocal<String> idHolder = new ThreadLocal<>();
+Install dependencies in each app (npm install or yarn).
+Start apps in separate terminals:
+# Angular Microfrontend
+cd angular-app
+ng serve --port 4201
 
-    public static void setId(String id) {
-        idHolder.set(id);
-    }
+# React Microfrontend
+cd react-app
+npx webpack serve
 
-    public static String getId() {
-        return idHolder.get();
-    }
-
-    public static void clear() {
-        idHolder.remove();
-    }
-}
-
-
-@Service
-public class MyService {
-
-    public void mainFlow(String id) {
-        try {
-            RequestContext.setId(id);
-
-            step1();  // no id param
-            step2();  // no id param
-            saveToDatabase();  // also uses the context
-
-        } finally {
-            RequestContext.clear();  // ⚠️ very important to prevent memory leaks
-        }
-    }
-
-    public void step1() {
-        String id = RequestContext.getId();
-        System.out.println("Step1: ID = " + id);
-    }
-
-    public void step2() {
-        String id = RequestContext.getId();
-        System.out.println("Step2: ID = " + id);
-    }
-}
-
-public class JobContext {
-    private static final InheritableThreadLocal<String> jobId = new InheritableThreadLocal<>();
-
-    public static void setJobId(String id) {
-        jobId.set(id);
-    }
-
-    public static String getJobId() {
-        return jobId.get();
-    }
-
-    public static void clear() {
-        jobId.remove();
-    }
-}
+# Container Host App
+cd container-app
+ng serve --port 4200
 
