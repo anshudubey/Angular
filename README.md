@@ -166,5 +166,37 @@ public void scheduledCleanupJob() {
 }
 
 
+*********************************************************************************************************
+public Map<String, String> deleteRecords() {
+    Map<String, String> response = new HashMap<>();
+    boolean failed = false;
+    StringBuilder error = new StringBuilder();
+
+    try {
+        table1Repo.deleteAll();
+    } catch (Exception ex) {
+        failed = true;
+        error.append(ex.getMessage());
+    }
+
+    try {
+        table2Repo.deleteAll();
+    } catch (Exception ex) {
+        failed = true;
+        if (error.length() > 0) error.append(" | ");  // separate multiple errors
+        error.append(ex.getMessage());
+    }
+
+    if (failed) {
+        response.put("status", "FAIL");
+        response.put("error", error.toString());
+    } else {
+        response.put("status", "SUCCESS");
+    }
+
+    return response;
+}
+
+
 
 
