@@ -88,4 +88,83 @@ public class DeleteStatusResponse {
 
     // Getters, Setters
 }
+********************************************************************************************************************************************************************
+Service B
+@DeleteMapping("/cleanup/delete")
+public ResponseEntity<Map<String, String>> deleteRecords() {
+    Map<String, String> result = deletionService.deleteRecords();
+    return ResponseEntity.ok(result);
+}
+
+
+@Service
+public class DeletionService {
+
+    @Autowired private Table1Repository table1Repo;
+    @Autowired private Table2Repository table2Repo;
+
+    public Map<String, String> deleteRecords() {
+        Map<String, String> result = new HashMap<>();
+
+        try {
+            table1Repo.deleteAll(); // or your custom delete logic
+            result.put("table1", "SUCCESS");
+        } catch (Exception e) {
+            result.put("table1", "FAILURE: " + e.getMessage());
+        }
+
+        try {
+            table2Repo.deleteAll();
+            result.put("table2", "SUCCESS");
+        } catch (Exception e) {
+            result.put("table2", "FAILURE: " + e.getMessage());
+        }
+
+        return result;
+    }
+}
+
+Service A
+public Map<String, String> invokeDeleteService() {
+    try {
+        ResponseEntity<Map> response = restTemplate.exchange(
+            "http://service-b/cleanup/delete",
+            HttpMethod.DELETE,
+            null,
+            Map.class
+        );
+        return response.getBody();
+    } catch (Exception ex) {
+        Map<String, String> errorMap = new HashMap<>();
+        errorMap.put("SERVICE_B", "FAILURE: " + ex.getMessage());
+        return errorMap;
+    }
+}
+
+
+public void processAndSaveHistory(String jobId, Map<String, String> statusMap) {
+    for (Map.Entry<String, String> entry : statusMap.entrySet()) {
+        String table = entry.getKey();
+        String status = entry.getValue();
+
+        // Example: Save to your history table
+        History history = new History();
+        history.setJobId(jobId);  // or entityId / schedulerId
+        history.setComponent(table);
+        history.setStatus(status);
+        history.setTimestamp(LocalDateTime.now());
+
+        historyRepository.save(history);
+    }
+}
+
+ Final Usage Flow
+public void scheduledCleanupJob() {
+    String jobId = UUID.randomUUID().toString();  // optional tracking ID
+    Map<String, String> result = invokeDeleteService();
+    processAndSaveHistory(jobId, result);
+}
+
+
+
 
