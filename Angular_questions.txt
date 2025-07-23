@@ -1,0 +1,139 @@
+Basic :
+1.What is the major diff from architecture perspective between angular and angular js?
+Architecture
+AngularJS : MVC / MVVM
+Angular : Component-based 
+
+2. What is the difference between ngOnInit and constructor in Angular components?
+Answer: The constructor is used for dependency injection and basic class setup. ngOnInit is a lifecycle hook used for component initialization logic and is called after Angular sets input properties.
+
+3. What is the purpose of ChangeDetectionStrategy.OnPush and when should you use it?
+Answer: It tells Angular to check the component only when input references change or events fire, improving performance. Use it in stateless or highly optimized components.
+
+4. What are the advantages of using trackBy with *ngFor?
+Answer: trackBy helps Angular identify list items uniquely to avoid re-rendering unchanged elements, significantly improving performance for large lists.
+
+5. What is the difference between BehaviorSubject and Subject in RxJS?
+Answer: BehaviorSubject holds a current value and emits it immediately to new subscribers. Subject emits values only after subscription. BehaviorSubject is useful for state representation.
+
+********************************************************************************************************************************************
+
+1.
+What are Observables? How do you manage subscriptions in Angular?
+Answer: Observables represent data streams (async/push model). Angular uses RxJS for observables. Manage subscriptions using async pipe or takeUntil pattern with Subject to avoid memory leaks.
+
+Difference Between NgRx and Observables
+NgRx:
+A state management library based on Redux and RxJS.
+Uses Actions, Reducers, Effects, and Selectors.
+Provides centralized state, time-travel debugging, and immutability.
+Best suited for large-scale applications where multiple components depend on shared state.
+Promotes a predictable data flow and better testability.
+
+Observables (via RxJS):
+A reactive programming model for handling asynchronous data streams.
+Used directly in Angular services and components for tasks like HTTP, events, user input.
+Offers flexibility and simplicity for local or feature-specific state.
+Requires manual management of shared state across components.
+
+When would you choose NgRx vs Services + Observables?
+
+Answer: Choose Services + Observables for simpler apps or feature modules where local state suffices. Use NgRx for larger, complex apps requiring global state, undo/redo, time travel debugging, or immutability enforcement. NgRx also aligns well with Redux architecture for predictability.
+
+2. Explain the difference between Template-driven and Reactive Forms.
+Answer: Template-driven forms use HTML templates with directives like ngModel, suitable for simple forms. Reactive forms use TypeScript and FormControl, FormGroup, offering better testability, validation, and scalability for complex forms.
+
+4. What is Change Detection? How does it work internally?
+Answer: Change Detection checks for changes in data-bound properties and updates the DOM. Angular uses Zone.js to patch async operations and trigger CD automatically.
+
+What are the strategies available for Change Detection?
+Answer:
+Default: Checks entire component tree.
+OnPush: Only checks when inputs change or events are triggered. Better performance.
+
+5. How does Dependency Injection work in Angular?
+Answer: Angular uses hierarchical injectors to provide dependencies at different levels (root, module, component). Services marked with @Injectable({ providedIn: 'root' }) are singleton and tree-shakable.
+
+6. As u worked on react also, so Angular doesn’t have React-style error boundaries.  --> How do you handle error boundaries in Angular?
+Answer: Angular doesn’t have React-style error boundaries but you can catch global errors using ErrorHandler class. Locally, you can use try-catch blocks or use catchError in RxJS pipes for service-level errors. For template errors, you can use fallback components or ngIf to display error states gracefully.
+
+
+
+***************************************************************************************************************
+Angular coding questions:
+9. How do you create custom structural directives like ngIf?
+
+Answer:
+Use @Directive() with * selector
+Inject TemplateRef and ViewContainerRef.
+Control DOM rendering via createEmbeddedView() and clear().
+
+@Directive({ selector: '[appUnless]' })
+export class UnlessDirective {
+  constructor(private templateRef: TemplateRef<any>, private vcr: ViewContainerRef) {}
+
+  @Input() set appUnless(condition: boolean) {
+    if (!condition) {
+      this.vcr.createEmbeddedView(this.templateRef);
+    } else {
+      this.vcr.clear();
+    }
+  }
+}
+
+10. Poll a backend API every 5 seconds, stop polling if response contains { status: 'complete' }
+@Component({
+  selector: 'app-polling-example',
+  template: `<p>Polling status: {{ status }}</p>`
+})
+export class PollingExampleComponent implements OnInit, OnDestroy {
+  status = 'pending';
+  private destroy$ = new Subject<void>();
+
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    interval(5000)
+      .pipe(
+        startWith(0),
+        switchMap(() => this.http.get<{ status: string }>('/api/status')),
+        takeUntil(this.destroy$),
+        takeWhile(res => res.status !== 'complete', true)
+      )
+      .subscribe(res => this.status = res.status);
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+}
+
+***************************************************************************
+Additional
+
+1. What is Angular Ivy? How does it improve over View Engine?
+Answer: Ivy is Angular's next-generation compilation and rendering pipeline, introduced in Angular 9. It improves build performance, enables tree-shaking (smaller bundles), offers better debugging, and allows for faster testing and rendering.
+
+What changes were introduced with Ivy in Angular 9?
+Answer:
+Smaller bundle size
+Better debugging with improved error messages
+Improved type-checking
+Faster compilation
+
+
+2. How do you optimize an Angular app for production?
+Answer:
+Use ng build --configuration production
+Lazy load feature modules
+Enable ChangeDetectionStrategy.OnPush
+Use trackBy in *ngFor
+Minimize third-party packages
+Use standalone components and Signals
+Optimize images and static assets
+Enable persistent build cache
+
+3. Pure/impure pipes
+
+4. options for data sharing
